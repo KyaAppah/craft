@@ -1,0 +1,15 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { YayoiComponent } from './yayoi/yayoi.component';
+
+const routes: Routes = [
+  { path: ' ', component: HomeComponent },
+  { path: 'yayoi'}, componen: YayoiComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
