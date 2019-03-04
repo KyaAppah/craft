@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Wndr {background-image: url('https://static1.squarespace.com/static/58fd82dbbf629ab224f81b68/t/5bbc8a578165f501473c2f75/1539082841805/Infinity-Room-Wndr.jpg?format=1000w');}
+#Museum {background-image: url('https://hirshhorn.si.edu/wp-content/uploads/2016/12/39_1966_peep-show.jpg');}
+#Victoria {background-image: url('https://secretldn.com/wp-content/uploads/2018/07/Yayoi-Kusama.jpg');}
+#Tate {background-image: url('https://www.tate.org.uk/sites/default/files/styles/width-840/public/images/image/yayo-kusama-passing-winter-2005-c-yayo-kusama-courtesy-victoria-miro-gallery-london.jpg');}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+</style>
+</head>
+<body>
+<span style="font-size:30px;cursor:pointer" class="bottom-left" onclick="openNav()">&#9776; </span>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Yayoi Kusama</a>
+    <a href="#">Her Work</a>
+    <a href="#">Exhibitions</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+<button class="tablink" onclick="openPage('Wndr', this, 'red')">Wndr</button>
+<button class="tablink" onclick="openPage('Museum', this, 'red')" id="defaultOpen">Museum</button>
+<button class="tablink" onclick="openPage('Victoria', this, 'red')">Contact</button>
+<button class="tablink" onclick="openPage('Tate', this, 'red')">Tate Modern</button>
+
+<div id="Wndr" class="tabcontent">
+  <h3>Wndr</h3>
+  <p>Wndr is where the heart is..</p>
+</div>
+
+<div id="Museum" class="tabcontent">
+  <h3>Museum</h3>
+  <p>Some Museum this fine day!</p> 
+</div>
+
+<div id="Victoria" class="tabcontent">
+  <h3>Victoria Miro</h3>
+  <p>VM</p>
+</div>
+
+<div id="Tate" class="tabcontent">
+  <h3>Tate Modern</h3>
+  <p>Lorem Ipsum</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

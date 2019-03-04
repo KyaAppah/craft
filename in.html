@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.parallax {
+  /* The image used */
+  background-image: url("https://www.modernamuseet.se/stockholm/wp-content/uploads/sites/3/2016/06/kusama-yayoi-_louis-vuitton-shop-window-display-with-tentacles_2012-2015_1500x1386-980x906.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text {
+  background-color: white;
+  color: black;
+  font-size: 6vw; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+p.ex1 {
+  padding-left: 350px;
+  padding-top: 30px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="parallax">  <div class="text">YAYOI KUSAMA</div></div>
+<span style="font-size:30px;cursor:pointer" class="top-left" onclick="openNav()">&#9776; </span>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Yayoi Kusama</a>
+    <a href="#">Her Work</a>
+    <a href="#">Exhibitions</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+  
+<div class= 'ex1'> 
+<p align='left' class='ex1' style="color:gray">For almost seventy years Yayoi Kusama has developed a practice, which, though it shares affiliations with Surrealism, Minimalism, Pop art, Eccentric Abstraction, the Zero and Nul movements, resists any singular classification. Born in Matsumoto City, Japan in 1929, she studied painting in Kyoto before moving to New York in the late 1950s, and by the mid-1960s had become well known in the avant-garde world for her provocative happenings and exhibitions. Since this time, Kusama's extraordinary artistic endeavours have spanned painting, drawing, collage, sculpture, performance, film, printmaking, installation and environmental art as well as literature, fashion (most notably in her 2012 collaboration with Louis Vuitton) and product design.<br><br>An enduring feature of Kusama’s unique art is the intricate lattice of paint that covers the surface of her Infinity Net canvases, the negative spaces between the individual loops of these all-over patterns emerging as delicate polka dots. These motifs have their roots in hallucinations from which she has suffered since childhood, in which the world appears to her to be covered with proliferating forms. Forging a path between abstract expressionism and minimalism, Kusama first showed her white Infinity Nets in New York in the late 1950s to critical acclaim. She continues to develop their possibilities in monochromatic works which are covered with undulating meshes that seem to fluctuate and dissolve as the viewer moves around them.<br><br>Another key motif is the pumpkin form, which has achieved an almost mythical status in Kusama’s art since the late 1940s. Coming from a family that made its living cultivating plant seeds, Kusama was familiar with the kabocha squash in the fields that surrounded her childhood home and the pumpkin continues to occupy a special place in her iconography. She has described her images of them as a form of self-portraiture.<br<br>From these to Accumulation sculptures, where everyday objects are made uncanny with a covering of soft-sculpture phallic forms or dried macaroni, to monumental outdoor sculptures and installations, such as Narcissus Garden, originating in 1966 when Kusama first participated in the Venice Biennale, and to the entrancing illusions of recent experiential mirrored room installations, Kusama’s work is far-reaching, expansive and immersive. Simultaneously infinitesimal and unlimited in scale, immeasurable yet intimate, it allows the viewer to enter into a fully realised world.<br><br>It is with characteristic dynamism that Kusama’s My Eternal Soul series, first began in 2009, has grown far in excess of the hundred works originally conceived by the artist. Distilled within the My Eternal Soul paintings are the themes and obsessions that characterise Kusama’s art, encapsulating a surreal and humorous, as well as instinctual approach to art making. Each new work of the ongoing series abounds with imagery including eyes, faces in profile and other more indeterminate forms recalling cell structures, often in pulsating combinations of colour. Some appear psychedelically primordial, other examples bring to mind ancient landscapes and grand geological patterns. This is Kusama, a pioneer in her command of a variety of media, at her most personal and direct, relying on brush, paint and canvas alone. They reveal an artist overflowing with ideas and undiminished in her desire to depict the apparently contradictory, unpredictable and undepictable, well into her ninth decade.<br><br>Kusama represented Japan at the 45th Venice Biennale in 1993, and currently lives and works in Tokyo, where the Yayoi Kusama Museum opened October 2017 with the inaugural exhibition Creation is a Solitary Pursuit, Love is What Brings You Closer to Art. Over the past decade there have been museum exhibitions of Kusama’s work touring the world in North America, Japan, Korea, Singapore, China, Australia, Russia, Brazil, Argentina, Mexico, Chile, Spain, England, France, Denmark, Norway, Sweden and Finland. In 2016 Kusama was selected as one of TIME Magazine’s World’s 100 Most Influential People. She was also named the world’s most popular artist by various news outlets, based on figures reported by The Art Newspaper for global museum attendance. In 2016, Kusama received the Order of Culture, one of the highest honours bestowed by the Imperial Family. Kusama is the first woman to be honoured with the prestigious medal for drawings and sculptures<br><br>A major exhibition focusing on the evolution of Kusama’s Infinity Mirror Rooms tours the US throughout 2017 to 2019. The most significant North American tour of Kusama’s work in nearly two decades began at the Hirschhorn Museum and Sculpture Garden (February–May 2017), travelling to Seattle Art Museum (June–September 2017), The Broad, Los Angeles (October 2017– January 2018), Art Gallery of Ontario (March– May 2018), Cleveland Museum of Art (July–October 2018) and The High Museum of Art, Atlanta (November 2018–February 2019).<br><br>Further current and recent major international touring exhibitions include Yayoi Kusama: Life is the Heart of a Rainbow, National Gallery of Singapore (2017); travelling to Queensland Art Gallery - Gallery of Modern Art, Brisbane (2017–2018), and Yayoi Kusama: In Infinity, which travelled from the Louisiana Museum of Modern Art, Humlebaek, (2015–2016) to Henie Onstad Kunstcenter, Oslo (2016); Moderna Museet, Stockholm (2016) and Helsinki Art Museum (2016–2017). Kusama Yayoi: A Dream I Dreamed was first presented at the Daegu Art Musuem, Korea (2013) and travelled subsequently to the Museum of Contemporary Art, Shanghai (2013–2014); Seoul Arts Centre, Korea (2014); Kaohsiung Museum of Fine Arts, Taiwan (2015); and the National Taiwan Museum of Fine Arts, Taichung (2015). The widely acclaimed Yayoi Kusama: Infinite Obsession toured from 2013 to 2015 at the South American institutional venues Malba - Fundación Costantini, Buenos Aires (2013); Centro Cultural Banco do Brasil, Brasília (2013– 2014); Instituto Tomie Ohtake, São Paulo (2014); Museo Tamayo, Mexico City (2014–2015) and Fundación CorpArtes, Santiago (2015). Previously, from 2012 to 2014 the large-scale exhibition Yayoi Kusama: Eternity of Eternal Eternity was staged in museums in Japan including The National Museum of Art, Osaka; Museum of Modern Art, Saitama; Matsumoto City Museum of Art, Matsumoto; Niigata City Art Museum, Niigata; Shizuoka Prefectural Museum of Art, Shizuoka; Oita Art Museum, Oita; The Museum of Art, Kochi; Contemporary Art Museum, Kumamoto; Akita Senshu Museum of Art & A  Akita Museum of Modern Art and Matsuzakaya Museum, Nagoya. A touring retrospective of the artist’s work was presented from 2011 to 2012 at the Museo Nacional Centro de Arte Reina Sofía, Madrid; Centre Pompidou, Paris; Tate Modern, London; and Whitney Museum of American Art, New York. </p> </div>
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+</body>
+</html>
